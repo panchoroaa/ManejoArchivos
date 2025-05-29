@@ -1,4 +1,4 @@
-package org.example;
+import Vista.ConsolaLogin;
 
 public class Inicio {
     public static void main(String[] args) {

@@ -1,5 +1,5 @@
-package org.example;
-
+package Controlador;
+import Controlador.DatosLogin;
 /**
  * Clase encargada de verificar las credenciales del usuario.
  */
@@ -10,7 +10,7 @@ public class Login {
      *
      * @param usuario nombre de usuario ingresado
      * @param clave contraseña ingresada
-     * @param datos objeto DatosLogin que contiene la lista de credenciales
+     * @param datos objeto Controlador.DatosLogin que contiene la lista de credenciales
      * @return true si las credenciales son válidas, false en caso contrario
      */
     public boolean autenticar(String usuario, String clave, DatosLogin datos) {

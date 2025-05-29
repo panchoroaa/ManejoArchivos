@@ -1,5 +1,7 @@
-package org.example;
+package Vista;
 
+import Controlador.DatosLogin;
+import Controlador.Login;
 import java.util.Scanner;
 
 /**
@@ -25,8 +27,6 @@ public class ConsolaLogin {
         } while (!opcion.equals("2"));
         scanner.close();
     }
-
-
     /**
      * Muestra las opciones disponibles para el usuario.
      */
@@ -45,14 +45,9 @@ public class ConsolaLogin {
      */
     private void ejecutarOpcion(String opcion) {
         switch (opcion) {
-            case "1":
-                manejarLogin();
-            case "2":
-                System.out.println("Saliendo del programa...");
-                break;
-
-            default:
-                System.out.println("Opción inválida, intenta de nuevo.");
+            case "1" -> manejarLogin();
+            case "2" -> System.out.println("Saliendo del programa...");
+            default -> System.out.println("Opción inválida, intenta de nuevo.");
         }
         // TODO: Si es "1" llamar a manejarLogin, si es "2" salir
     }
@@ -63,5 +58,9 @@ public class ConsolaLogin {
     private void manejarLogin() {
         // TODO: Pedir usuario y contraseña por consola
         // TODO: Llamar a login.autenticar() y mostrar mensaje según resultado
+        System.out.print("Ingresa tu usuario: ");
+        Object usuario = scanner.nextLine();
+        System.out.print("Ingresa tu contraseña: ");
+        Object contraseña = scanner.nextLine();
     }
 }
