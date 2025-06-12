@@ -8,7 +8,7 @@ public class Login {
         String intento = formatearCredenciales(usuario, clave);
         return verificarCredenciales(intento, credenciales);
     }
-
+//
 
     private static String formatearCredenciales(String usuario, String clave) {
         return usuario + ";" + clave;
