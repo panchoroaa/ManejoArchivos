@@ -1,4 +1,4 @@
-package Controlador;
+package Modelo;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -48,7 +48,7 @@ public class DatosLogin {
         System.out.println("Error al leer el archivo de login: " + e.getMessage());
     }
 
-    public static DatosLogin getCredenciales() {
-        return (DatosLogin) credenciales;
+    public List<String>getCredenciales() {
+        return credenciales;
     }
 }

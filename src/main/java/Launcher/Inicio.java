@@ -1,3 +1,5 @@
+package Launcher;
+
 import Vista.ConsolaLogin;
 
 public class Inicio {

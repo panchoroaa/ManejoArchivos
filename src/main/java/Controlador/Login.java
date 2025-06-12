@@ -1,14 +1,16 @@
 package Controlador;
 
+import Modelo.DatosLogin;
+
 public class Login {
 
-    public static void autenticar(String usuario, String clave, DatosLogin credenciales) {
+    public static boolean autenticar(String usuario, String clave, DatosLogin credenciales) {
         String intento = formatearCredenciales(usuario, clave);
-        verificarCredenciales(intento, credenciales);
+        return verificarCredenciales(intento, credenciales);
     }
 
 
-    public static String formatearCredenciales(String usuario, String clave) {
+    private static String formatearCredenciales(String usuario, String clave) {
         return usuario + ";" + clave;
     }
 

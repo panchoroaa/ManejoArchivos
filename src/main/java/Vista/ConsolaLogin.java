@@ -1,6 +1,6 @@
 package Vista;
 
-import Controlador.DatosLogin;
+import Modelo.DatosLogin;
 import Controlador.Login;
 import java.util.Scanner;
 
@@ -61,8 +61,11 @@ public class ConsolaLogin {
         String usuario = scanner.nextLine();
         System.out.print("Ingresa tu contraseña: ");
         String clave = scanner.nextLine();
-        Login.formatearCredenciales(usuario,clave);
-        Login.autenticar(usuario,clave,DatosLogin.getCredenciales());
+        if (Login.autenticar(usuario,clave,datos)){
+            System.out.println("Hola "+ usuario+"." );
+        }
+        else { System.out.println("No se pudo iniciar sesión");
 
+        }
     }
 }
